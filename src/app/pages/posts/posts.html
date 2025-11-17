@@ -1,0 +1,36 @@
+<div class="posts-header">
+
+     <h1>Blog Posts</h1>
+     <a routerLink="/posts/new" class="btn btn-primary">Create New Post</a>
+    
+</div>
+
+
+<div class="filters">
+
+      <input type="text" placeholder="Search posts..." [(ngModel)]="searchTerm" (input)="filterPosts()" class="search-input">
+      <select [(ngModel)]="selectedCategory" (change)="filterPosts()" class="category-select">
+          <option value="">All Categories</option>
+          <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+      </select>
+
+</div>
+
+
+<div *ngIf="filteredPosts.length === 0" class="no-data">No posts found</div>
+
+
+<div class="posts-grid">
+     <div *ngFor="let post of filteredPosts" class="post-card">
+         <h3>{{post.title}}</h3>
+         <p class="post-meta" >
+                By {{post.author}} || {{post.date}} || {{getCategoryName(post.categoryId)}} 
+         </p>
+         <p class="post-content-preview">{{post.content.substring(0,100)}}...</p>
+         <div class="post-actions">
+                <a [routerLink]="['/posts',post.id]" class="btn-link">View</a>
+                <a [routerLink]="['/posts',post.id,'edit']" class="btn-link">Edit</a>
+                <button (click)="deletePost(post.id)" class="btn-danger">Delete</button>
+         </div>
+     </div>
+</div>

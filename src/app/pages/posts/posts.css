@@ -1,0 +1,57 @@
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.search-input, .category-select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+.posts-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.post-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+
+.post-content-preview {
+  color: #666;
+  margin: 1rem 0;
+}
+
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
