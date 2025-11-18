@@ -1,0 +1,518 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with Angular",
+      "content": "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "TypeScript", "Web Development"],
+      "date": "2025-01-15",
+      "thumbnail": ""
+    },
+    {
+      "id": 2,
+      "title": "Understanding Angular Components",
+      "content": "Components are the main building block for Angular applications. Each component consists of: a TypeScript class, an HTML template, and styles. The component class handles data and functionality, the template defines the UI, and styles provide the component's appearance.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Components", "Angular", "Tutorial"],
+      "date": "2025-01-16",
+      "thumbnail": ""
+    },
+    {
+      "id": 3,
+      "title": "Angular Services Explained",
+      "content": "Services in Angular are used to share data, logic, and functions across components. They help keep components lean and focused on the view-related logic.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Services", "Dependency Injection"],
+      "date": "2025-01-17",
+      "thumbnail": ""
+    },
+    {
+      "id": 4,
+      "title": "RxJS Observables in Angular",
+      "content": "Observables provide support for passing messages between publishers and subscribers. Angular uses RxJS heavily for asynchronous operations.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["RxJS", "Angular", "Observables"],
+      "date": "2025-01-18",
+      "thumbnail": ""
+    },
+    {
+      "id": 5,
+      "title": "Angular Routing Basics",
+      "content": "Angular routing allows navigation between different views of an application. It uses the RouterModule to configure paths and components.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Routing", "Angular", "SPA"],
+      "date": "2025-01-19",
+      "thumbnail": ""
+    },
+    {
+      "id": 6,
+      "title": "TypeScript Interfaces in Depth",
+      "content": "Interfaces in TypeScript define the shape of an object. They are crucial for strong typing and large-scale application development.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["TypeScript", "Interfaces", "Programming"],
+      "date": "2025-01-21",
+      "thumbnail": ""
+    },
+    {
+      "id": 7,
+      "title": "Introduction to Web Development",
+      "content": "Web development involves building websites and applications for the internet. It includes both frontend and backend technologies.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "date": "2025-01-22",
+      "thumbnail": ""
+    },
+    {
+      "id": 8,
+      "title": "Building Responsive Layouts",
+      "content": "Responsive design ensures web pages render well on all devices. CSS Flexbox and Grid are key tools for modern responsiveness.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["CSS", "Responsive Design", "Frontend"],
+      "date": "2025-01-23",
+      "thumbnail": ""
+    },
+    {
+      "id": 9,
+      "title": "JavaScript Async/Await Tutorial",
+      "content": "Async/Await simplifies working with asynchronous code. It is syntactic sugar over Promises, helping write cleaner async code.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["JavaScript", "Async", "Promises"],
+      "date": "2025-01-25",
+      "thumbnail": ""
+    },
+    {
+      "id": 10,
+      "title": "Understanding REST APIs",
+      "content": "REST APIs allow communication between client and server systems. They use standard HTTP verbs like GET, POST, PUT, and DELETE.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["API", "REST", "Backend"],
+      "date": "2025-01-26",
+      "thumbnail": ""
+    },
+    {
+      "id": 11,
+      "title": "Node.js Basics for Beginners",
+      "content": "Node.js is a runtime environment that allows JavaScript to run outside the browser. It is commonly used for backend development.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Node.js", "JavaScript", "Backend"],
+      "date": "2025-01-27",
+      "thumbnail": ""
+    },
+    {
+      "id": 12,
+      "title": "Mastering CSS Grid",
+      "content": "CSS Grid is a two-dimensional layout system that offers powerful ways to build complex responsive designs.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["CSS Grid", "Layouts", "UI"],
+      "date": "2025-01-28",
+      "thumbnail": ""
+    },
+    {
+      "id": 13,
+      "title": "Understanding Promises in JavaScript",
+      "content": "Promises represent the eventual completion or failure of an asynchronous operation. They are foundational to modern async programming.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Promises", "JavaScript", "Asynchronous"],
+      "date": "2025-01-29",
+      "thumbnail": ""
+    },
+    {
+      "id": 14,
+      "title": "Angular Lifecycle Hooks",
+      "content": "Angular components have lifecycle hooks that enable developers to tap into key events in a component's lifecycle.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Lifecycle", "Hooks"],
+      "date": "2025-01-30",
+      "thumbnail": ""
+    },
+    {
+      "id": 15,
+      "title": "Building Forms in Angular",
+      "content": "Angular supports template-driven and reactive forms. Reactive forms provide more control and scalability in complex applications.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Forms", "Reactive Forms"],
+      "date": "2025-01-31",
+      "thumbnail": ""
+    },
+    {
+      "id": 16,
+      "title": "Deploying Angular Apps",
+      "content": "Angular applications can be deployed to various platforms such as Firebase, Netlify, and AWS S3. Production builds are optimized automatically.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Deployment", "Build"],
+      "date": "2025-02-01",
+      "thumbnail": ""
+    },
+    {
+      "id": 17,
+      "title": "Working with APIs in Angular",
+      "content": "Angular's HttpClient module provides a simplified API for HTTP requests. It supports interceptors, typed responses, and error handling.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "HttpClient", "API"],
+      "date": "2025-02-02",
+      "thumbnail": ""
+    },
+    {
+      "id": 18,
+      "title": "JavaScript ES6 Features Overview",
+      "content": "ES6 introduced major improvements to JavaScript including let/const, arrow functions, classes, template literals, and modules.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["JavaScript", "ES6", "Tutorial"],
+      "date": "2025-02-03",
+      "thumbnail": ""
+    },
+    {
+      "id": 19,
+      "title": "Introduction to MongoDB",
+      "content": "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It is widely used in modern web applications.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["MongoDB", "Database", "Backend"],
+      "date": "2025-02-04",
+      "thumbnail": ""
+    },
+    {
+      "id": 20,
+      "title": "Building REST APIs with Express.js",
+      "content": "Express.js is a fast and minimalist backend framework for Node.js. It is commonly used to build REST APIs.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Express.js", "API", "Node.js"],
+      "date": "2025-02-05",
+      "thumbnail": ""
+    },
+    {
+      "id": 21,
+      "title": "Advanced Angular Directives",
+      "content": "Directives are powerful Angular features that allow you to attach behavior to DOM elements. Learn about structural and attribute directives.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Directives", "Advanced"],
+      "date": "2025-02-06",
+      "thumbnail": ""
+    },
+    {
+      "id": 22,
+      "title": "State Management with NgRx",
+      "content": "NgRx provides reactive state management for Angular applications using RxJS. It follows the Redux pattern with actions, reducers, and effects.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "NgRx", "State Management"],
+      "date": "2025-02-07",
+      "thumbnail": ""
+    },
+    {
+      "id": 23,
+      "title": "Angular Testing Best Practices",
+      "content": "Learn how to write effective unit tests for Angular components, services, and pipes using Jasmine and Karma testing frameworks.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["Angular", "Testing", "Jasmine"],
+      "date": "2025-02-08",
+      "thumbnail": ""
+    },
+    {
+      "id": 24,
+      "title": "TypeScript Generics Explained",
+      "content": "Generics in TypeScript enable creating reusable components that work with multiple types while maintaining type safety.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["TypeScript", "Generics", "Programming"],
+      "date": "2025-02-09",
+      "thumbnail": ""
+    },
+    {
+      "id": 25,
+      "title": "Modern CSS with Sass",
+      "content": "Sass is a CSS preprocessor that adds powerful features like variables, nesting, mixins, and inheritance to your stylesheets.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["CSS", "Sass", "Preprocessors"],
+      "date": "2025-02-10",
+      "thumbnail": ""
+    },
+    {
+      "id": 26,
+      "title": "React vs Angular: A Comparison",
+      "content": "Comparing two popular frontend frameworks - their architecture, learning curve, performance, and use cases for modern web development.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["React", "Angular", "Comparison"],
+      "date": "2025-02-11",
+      "thumbnail": ""
+    },
+    {
+      "id": 27,
+      "title": "Vue.js Fundamentals",
+      "content": "Vue.js is a progressive JavaScript framework for building user interfaces. Learn about its core concepts and reactive data binding.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Vue.js", "JavaScript", "Frontend"],
+      "date": "2025-02-12",
+      "thumbnail": ""
+    },
+    {
+      "id": 28,
+      "title": "JavaScript Design Patterns",
+      "content": "Explore common JavaScript design patterns like Module, Observer, Factory, and Singleton to write maintainable and scalable code.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["JavaScript", "Design Patterns", "Programming"],
+      "date": "2025-02-13",
+      "thumbnail": ""
+    },
+    {
+      "id": 29,
+      "title": "Database Design Principles",
+      "content": "Learn fundamental database design concepts including normalization, relationships, indexing, and data integrity constraints.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Database", "SQL", "Design"],
+      "date": "2025-02-14",
+      "thumbnail": ""
+    },
+    {
+      "id": 30,
+      "title": "Docker for Web Developers",
+      "content": "Docker containers simplify application deployment and environment consistency. Learn how to containerize web applications.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Docker", "Containers", "DevOps"],
+      "date": "2025-02-15",
+      "thumbnail": ""
+    },
+    {
+      "id": 31,
+      "title": "Git Version Control Mastery",
+      "content": "Master Git commands, branching strategies, and collaboration workflows for effective version control in software projects.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Git", "Version Control", "Tools"],
+      "date": "2025-02-16",
+      "thumbnail": ""
+    },
+    {
+      "id": 32,
+      "title": "Web Performance Optimization",
+      "content": "Techniques to improve website loading speed and performance including code splitting, lazy loading, and asset optimization.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Performance", "Optimization", "Web"],
+      "date": "2025-02-17",
+      "thumbnail": ""
+    },
+    {
+      "id": 33,
+      "title": "Progressive Web Apps (PWA)",
+      "content": "PWAs combine the best of web and mobile apps. Learn about service workers, app manifests, and offline functionality.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["PWA", "Web Apps", "Mobile"],
+      "date": "2025-02-18",
+      "thumbnail": ""
+    },
+    {
+      "id": 34,
+      "title": "GraphQL vs REST",
+      "content": "Compare GraphQL and REST APIs - their differences, advantages, and when to choose each approach for your projects.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["GraphQL", "REST", "API"],
+      "date": "2025-02-19",
+      "thumbnail": ""
+    },
+    {
+      "id": 35,
+      "title": "Python for Web Development",
+      "content": "Python with frameworks like Django and Flask is excellent for backend development. Learn the basics of web development with Python.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Python", "Django", "Backend"],
+      "date": "2025-02-20",
+      "thumbnail": ""
+    },
+    {
+      "id": 36,
+      "title": "Machine Learning Basics",
+      "content": "Introduction to machine learning concepts, algorithms, and practical applications using Python and popular ML libraries.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Machine Learning", "AI", "Python"],
+      "date": "2025-02-21",
+      "thumbnail": ""
+    },
+    {
+      "id": 37,
+      "title": "Cybersecurity Fundamentals",
+      "content": "Essential cybersecurity concepts including encryption, authentication, common vulnerabilities, and secure coding practices.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Security", "Cybersecurity", "Best Practices"],
+      "date": "2025-02-22",
+      "thumbnail": ""
+    },
+    {
+      "id": 38,
+      "title": "Agile Development Methodology",
+      "content": "Understanding Agile principles, Scrum framework, and how agile methodologies improve software development processes.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Agile", "Scrum", "Methodology"],
+      "date": "2025-02-23",
+      "thumbnail": ""
+    },
+    {
+      "id": 39,
+      "title": "UI/UX Design Principles",
+      "content": "Fundamental principles of user interface and user experience design for creating intuitive and engaging digital products.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["UI", "UX", "Design"],
+      "date": "2025-02-24",
+      "thumbnail": ""
+    },
+    {
+      "id": 40,
+      "title": "Cloud Computing with AWS",
+      "content": "Introduction to Amazon Web Services including EC2, S3, Lambda, and other core services for cloud application deployment.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["AWS", "Cloud", "DevOps"],
+      "date": "2025-02-25",
+      "thumbnail": ""
+    },
+    {
+      "id": 41,
+      "title": "Mobile App Development with React Native",
+      "content": "Build cross-platform mobile applications using React Native. Learn about components, navigation, and native module integration.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["React Native", "Mobile", "JavaScript"],
+      "date": "2025-02-26",
+      "thumbnail": ""
+    },
+    {
+      "id": 42,
+      "title": "Software Architecture Patterns",
+      "content": "Explore common software architecture patterns like MVC, Microservices, and Serverless for building scalable applications.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Architecture", "Patterns", "Software"],
+      "date": "2025-02-27",
+      "thumbnail": ""
+    },
+    {
+      "id": 43,
+      "title": "Data Structures and Algorithms",
+      "content": "Essential data structures and algorithms every developer should know for technical interviews and efficient programming.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Algorithms", "Data Structures", "Programming"],
+      "date": "2025-02-28",
+      "thumbnail": ""
+    },
+    {
+      "id": 44,
+      "title": "DevOps CI/CD Pipelines",
+      "content": "Implement continuous integration and continuous deployment pipelines using tools like Jenkins, GitLab CI, and GitHub Actions.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["DevOps", "CI/CD", "Automation"],
+      "date": "2025-03-01",
+      "thumbnail": ""
+    },
+    {
+      "id": 45,
+      "title": "Web Accessibility (a11y)",
+      "content": "Making websites accessible to people with disabilities using semantic HTML, ARIA attributes, and keyboard navigation.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Accessibility", "a11y", "Web Standards"],
+      "date": "2025-03-02",
+      "thumbnail": ""
+    },
+    {
+      "id": 46,
+      "title": "Blockchain Technology Basics",
+      "content": "Understanding blockchain fundamentals, cryptocurrencies, smart contracts, and decentralized applications (dApps).",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Blockchain", "Cryptocurrency", "Web3"],
+      "date": "2025-03-03",
+      "thumbnail": ""
+    },
+    {
+      "id": 47,
+      "title": "Full-Stack Development Roadmap",
+      "content": "Comprehensive guide to becoming a full-stack developer covering frontend, backend, databases, and deployment technologies.",
+      "author": "Sharad",
+      "categoryId": 3,
+      "tags": ["Full-Stack", "Roadmap", "Career"],
+      "date": "2025-03-04",
+      "thumbnail": ""
+    },
+    {
+      "id": 48,
+      "title": "Microservices Architecture",
+      "content": "Designing and building microservices-based applications with independent deployment, scalability, and technology diversity.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["Microservices", "Architecture", "Backend"],
+      "date": "2025-03-05",
+      "thumbnail": ""
+    },
+    {
+      "id": 49,
+      "title": "JavaScript Frameworks Comparison",
+      "content": "Detailed comparison of popular JavaScript frameworks including React, Angular, Vue, and Svelte for modern web development.",
+      "author": "Sharad",
+      "categoryId": 2,
+      "tags": ["JavaScript", "Frameworks", "Comparison"],
+      "date": "2025-03-06",
+      "thumbnail": ""
+    },
+    {
+      "id": 50,
+      "title": "Advanced TypeScript Techniques",
+      "content": "Master advanced TypeScript features like conditional types, mapped types, template literal types, and declaration merging.",
+      "author": "Sharad",
+      "categoryId": 1,
+      "tags": ["TypeScript", "Advanced", "Programming"],
+      "date": "2025-03-07",
+      "thumbnail": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Programming"
+    },
+    {
+      "id": 2,
+      "name": "Web Development"
+    },
+    {
+      "id": 3,
+      "name": "Tutorials"
+    }
+  ]
+}
