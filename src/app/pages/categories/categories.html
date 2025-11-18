@@ -1,0 +1,51 @@
+<div class="categories-header">
+      <h1>Categories</h1>
+      <button (click)="showAddForm = true" class="btn btn-primary">Add Category</button>
+</div>
+
+
+<div *ngIf="showAddForm" class="add-category-form">     
+    <h3>Add New Category</h3>
+
+     <input
+       type="text"
+       [(ngModel)]="newCategoryName"
+       placeholder="Category name"
+       class="form-control"
+     />
+  
+     <div class="form-actions">
+         <button (click)="cancelAdd()" class="btn btn-secondary">Cancel</button>
+         <button (click)="addCategory()" [disabled]="!newCategoryName" class="btn btn-primary">Add</button>
+     </div>
+</div>
+
+
+<div *ngIf="categories.length === 0" class="no-data">No categories yet</div>
+
+
+<div class="categories-list">
+    <div *ngFor="let category of categories" class="category-card">
+        <div class="category-info">
+            <h3>{{ category.name }}</h3>
+            <p>{{ getPostCount(category.id) }} posts</p>
+        </div>
+
+        <div class="category-actions">
+            <button (click)="editCategory(category)" class="btn btn-link">Edit</button>
+            <button (click)="deleteCategory(category.id)" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="editingCategory" class="edit-modal">
+    <div class="modal-content">
+        <h3>Edit Category</h3>
+        <input type="text" [(ngModel)]="editingCategory.name" class="form-control" />
+        <div class="modal-actions">
+            <button (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+            <button (click)="updateCategory()" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+</div>

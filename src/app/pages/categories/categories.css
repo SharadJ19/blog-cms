@@ -1,0 +1,60 @@
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+
+.add-category-form {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+
+.categories-list {
+  display: grid;
+  gap: 1rem;
+}
+
+
+.category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 400px;
+}
+
+
+.model-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
