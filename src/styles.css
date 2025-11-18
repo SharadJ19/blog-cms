@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Trebuchet MS';
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+.btn-link {
+  background: none;
+  color: #3498db;
+  text-decoration: underline;
+  padding: 0;
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.form-control:focus {
+  outline: none;
+  border-color: #3498db;
+}
