@@ -1,4 +1,4 @@
-.category-header {
+.categories-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,30 @@
 }
 
 
+.form-actions {
+  margin: 0.5rem;
+}
+.form-actions button {
+  margin: 0.2rem;
+}
+
+
+.category-actions {
+  margin: 0.5rem;
+}
+.category-actions button {
+  margin: 0.8rem;
+}
+
+
+.modal-actions {
+  margin: 0.5rem;
+}
+.modal-actions button {
+  margin: 0.2rem;
+}
+
+
 .category-card {
   display: flex;
   justify-content: space-between;
@@ -37,7 +61,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
