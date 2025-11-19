@@ -14,12 +14,20 @@
 }
 
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+
 .nav-links a {
+  display: inline-flex;
   color: white;
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  gap: 0.7rem;              
 }
 
 
@@ -33,4 +41,28 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+
+/* Hide nav links text on small screens */
+@media (max-width: 768px) {
+  .nav-links a {
+    padding: 0.5rem;
+  }
+
+  .nav-links a::after {
+    content: none;
+  }
+
+  /* Hide the actual text */
+  .nav-links a span,
+  .nav-links a {
+    font-size: 0;       /* hide text without removing element */
+  }
+
+  .nav-links a img {
+    width: 24px;
+    height: 24px;
+  }
+
 }
