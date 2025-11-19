@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api-service';
-import { PostModel } from '../../models/post-model';
+import { Post } from '../../models/post-model';
 import { RouterLink } from '@angular/router';
 import { NgIf, NgFor } from '@angular/common';
 
@@ -13,7 +13,7 @@ import { NgIf, NgFor } from '@angular/common';
 export class Dashboard implements OnInit {
   postsCount = 0;
   categoriesCount = 0;
-  recentPosts: PostModel[] = [];
+  recentPosts: Post[] = [];
 
   // we could also use inject keyword for using ApiService (modern way)
   constructor(private apiService: ApiService) {}
@@ -24,13 +24,13 @@ export class Dashboard implements OnInit {
 
   loadData() {
     // fetching the last 5 posts
-    this.apiService.getPosts().subscribe(posts => {
+    this.apiService.getPosts().subscribe((posts) => {
       this.postsCount = posts.length;
       this.recentPosts = posts.slice(-5).reverse();
     });
 
     // fetching the no of categories
-    this.apiService.getCategories().subscribe(categories => {
+    this.apiService.getCategories().subscribe((categories) => {
       this.categoriesCount = categories.length;
     });
   }
