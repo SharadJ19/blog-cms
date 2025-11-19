@@ -20,11 +20,11 @@
 <div *ngIf="filteredPosts.length === 0" class="no-data">No posts found</div>
 
 
-<div class="posts-grid">
+<div class="posts-list">
      <div *ngFor="let post of filteredPosts" class="post-card">
          <h3>{{post.title}}</h3>
          <p class="post-meta" >
-                By {{post.author}} || {{post.date}} || {{getCategoryName(post.categoryId)}} 
+                By {{post.author}} • {{post.date}} • {{getCategoryName(post.categoryId)}} 
          </p>
          <p class="post-content-preview">{{post.content.substring(0,100)}}...</p>
          <div class="post-actions">
