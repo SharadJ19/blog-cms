@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PostModel } from '../../models/post-model';
-import { CategoryModel } from '../../models/category-model';
+import { Post } from '../../models/post-model';
+import { Category } from '../../models/category-model';
 import { ApiService } from '../../services/api-service';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -13,9 +13,9 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrl: './posts.css',
 })
 export class Posts implements OnInit {
-  posts: PostModel[] = [];
-  filteredPosts: PostModel[] = [];
-  categories: CategoryModel[] = [];
+  posts: Post[] = [];
+  filteredPosts: Post[] = [];
+  categories: Category[] = [];
   searchTerm = '';
   selectedCategory = '';
 
@@ -53,7 +53,7 @@ export class Posts implements OnInit {
   }
 
   getCategoryName(categoryId: number): string {
-    const category = this.categories.find((cat) => cat.id === categoryId);
+    const category = this.categories.find((cat) => +cat.id === categoryId);
     return category ? category.name : 'Unknown';
   }
 
