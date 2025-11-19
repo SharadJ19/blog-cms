@@ -13,7 +13,7 @@
     <article class="post-content">
            <h1>{{post.title}}</h1>
            <div class="post-meta">
-                  Bt <strong>{{post.author}}</strong> on {{post.date}} || <span class="category">{{getCategoryName(post.categoryId)}}</span>
+                  By <strong>{{post.author}}</strong> on {{post.date}} • <span class="category">{{getCategoryName(post.categoryId)}}</span>
            </div>
 
            <div *ngIf="post.thumbnail" class="thumbnail">
