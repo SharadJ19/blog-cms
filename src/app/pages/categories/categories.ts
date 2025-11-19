@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryModel } from '../../models/category-model';
-import { PostModel } from '../../models/post-model';
+import { Category } from '../../models/category-model';
+import { Post } from '../../models/post-model';
 import { ApiService } from '../../services/api-service';
 import { NgIf, NgFor } from "@angular/common";
 import { FormsModule } from '@angular/forms';
@@ -16,11 +16,11 @@ import { FormsModule } from '@angular/forms';
 
 export class Categories implements OnInit {
 
-  categories: CategoryModel[] = [];
-  posts: PostModel[] = [];
+  categories: Category[] = [];
+  posts: Post[] = [];
   showAddForm = false;
   newCategoryName = '';
-  editingCategory?: CategoryModel;
+  editingCategory?: Category;
 
   constructor(private apiService: ApiService) {}
 
@@ -65,10 +65,9 @@ export class Categories implements OnInit {
   }
 
 
-  editCategory(category: CategoryModel) {
+  editCategory(category: Category) {
     this.editingCategory = { ...category };
   }
-
 
   updateCategory() {
     if (this.editingCategory) {
@@ -76,7 +75,7 @@ export class Categories implements OnInit {
         .updateCategory(this.editingCategory.id, this.editingCategory)
         .subscribe(() => {
           this.loadCategories();
-          this.cancelAdd();
+          this.cancelEdit();
         });
     }
   }
