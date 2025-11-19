@@ -1,6 +1,6 @@
 import { Component, NgModule, OnInit } from '@angular/core';
-import { PostModel } from '../../models/post-model';
-import { CategoryModel } from '../../models/category-model';
+import { Post } from '../../models/post-model';
+import { Category } from '../../models/category-model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../services/api-service';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -16,7 +16,7 @@ import { NgFor } from '@angular/common';
 
 
 export class PostForm implements OnInit {
-  post: Omit<PostModel, 'id'> = {
+  post: Omit<Post, 'id'> = {
     title: '',
     content: '',
     author: '',
@@ -26,7 +26,7 @@ export class PostForm implements OnInit {
     thumbnail: '',
   };
 
-  categories: CategoryModel[] = [];
+  categories: Category[] = [];
   tagsInput = '';
   isEdit = false;
   postId?: number;
@@ -76,7 +76,7 @@ export class PostForm implements OnInit {
         .updatePost(this.postId, {
           ...postData,
           id: this.postId,
-        } as PostModel)
+        } as Post)
         .subscribe(() => this.router.navigate(['/posts']));
     } else {
       this.apiService.createPost(postData).subscribe(() => this.router.navigate(['/posts']));
