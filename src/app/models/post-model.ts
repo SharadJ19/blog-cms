@@ -1,4 +1,4 @@
-export interface PostModel {
+export interface Post {
   id: number;
   title: string;
   content: string;
