@@ -3,502 +3,152 @@
     {
       "id": 1,
       "title": "Getting Started with Angular",
-      "content": "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.",
+      "content": "Angular is a powerful platform and framework designed for building robust single-page client applications using HTML and TypeScript. Developed and maintained by Google, Angular has become a cornerstone for modern web development due to its comprehensive feature set that promotes scalable, maintainable codebases. At its core, Angular is written entirely in TypeScript, a superset of JavaScript that adds static typing, interfaces, and advanced tooling to enhance developer productivity and catch errors early in the development cycle.\n\nTo get started with Angular, the first step is installing the Angular CLI (Command Line Interface), which is a command-line tool that scaffolds your project structure, generates components, services, and more, while also handling builds, testing, and deployment. You can install it globally via npm with the command `npm install -g @angular/cli`. Once installed, creating a new project is as simple as running `ng new my-app`, which sets up a boilerplate application with routing, testing frameworks like Jasmine and Karma, and a development server.\n\nThe heart of any Angular application is the module system. Every app begins with the root module, AppModule, which bootstraps the application and declares components, directives, and pipes. Components are the fundamental units of Angular apps—they encapsulate HTML templates, CSS styles, and TypeScript logic into reusable pieces. For instance, a simple component might display a list of items, handling user interactions like clicks or form submissions through event bindings.\n\nAngular's dependency injection system is another standout feature, allowing services to be injected into components where needed, promoting loose coupling and easier testing. Directives, both structural (like *ngIf and *ngFor) and attribute-based, empower developers to manipulate the DOM dynamically without raw JavaScript. Pipes transform data in templates on the fly, such as formatting dates or currencies.\n\nAs you dive deeper, you'll appreciate Angular's emphasis on reactivity with RxJS observables for handling asynchronous data streams, whether from HTTP requests or user events. The framework also supports ahead-of-time (AOT) compilation for faster rendering and smaller bundle sizes, making it ideal for enterprise-level applications.\n\nIn this tutorial series, we'll explore these concepts hands-on. By the end, you'll be equipped to build a full-featured todo app, complete with routing, forms, and API integration. Whether you're a beginner transitioning from vanilla JavaScript or a seasoned developer seeking Angular's structure, this guide will provide the foundation you need. Remember, practice is key—experiment with the code examples provided, and don't hesitate to refer to the official Angular documentation for the latest updates. With Angular, you're not just building apps; you're architecting scalable solutions for the web's future.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Angular", "TypeScript", "Web Development"],
       "date": "2025-01-15",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Getting+Started+with+Angular"
     },
     {
       "id": 2,
       "title": "Understanding Angular Components",
-      "content": "Components are the main building block for Angular applications. Each component consists of: a TypeScript class, an HTML template, and styles. The component class handles data and functionality, the template defines the UI, and styles provide the component's appearance.",
+      "content": "In the world of Angular, components serve as the primary building blocks for constructing dynamic user interfaces. Each component is a self-contained unit that combines a TypeScript class for logic, an HTML template for the view, and CSS styles for presentation, creating a cohesive, reusable entity. This separation of concerns not only streamlines development but also enhances maintainability, as changes to one aspect rarely ripple across others.\n\nThe TypeScript class, often decorated with @Component, defines the component's properties, methods, and lifecycle hooks. For example, a 'UserProfileComponent' might have a 'user' property bound to the template via interpolation {{ user.name }}, and a 'saveProfile()' method triggered by a button click event. Selectors like 'app-user-profile' allow you to embed this component within parent templates, fostering a hierarchical structure akin to a tree of UI elements.\n\nTemplates leverage Angular's powerful template syntax, including data binding modes: interpolation for one-way output, property binding [property] for inputs, event binding (event) for outputs, and two-way binding [(ngModel)] for forms. Structural directives such as *ngFor iterate over arrays to render lists, while *ngIf conditionally shows or hides elements, making your UI responsive to data changes without manual DOM manipulation.\n\nStyling in Angular components can be encapsulated using ViewEncapsulation modes—Emulated for shadow DOM-like isolation, None for global styles, or ShadowDom for true encapsulation. This ensures that a button's red color in one component doesn't bleed into another, preventing style conflicts in large apps.\n\nComponents also communicate via @Input() for parent-to-child data flow and @Output() with EventEmitter for child-to-parent events, enabling modular architectures. For complex state management, consider OnPush change detection strategy to optimize performance by only updating when inputs change.\n\nReal-world applications often nest dozens of components; think of a dashboard with charts, tables, and modals, each as a distinct component. Testing them individually with Angular's TestBed ensures reliability. As you build more, you'll see how components abstract complexity, turning monolithic code into elegant, composable designs. This post lays the groundwork—next, we'll implement a sample e-commerce product card component to see these principles in action. Dive in, code along, and transform your Angular development workflow.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Components", "Angular", "Tutorial"],
       "date": "2025-01-16",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Understanding+Angular+Components"
     },
     {
       "id": 3,
       "title": "Angular Services Explained",
-      "content": "Services in Angular are used to share data, logic, and functions across components. They help keep components lean and focused on the view-related logic.",
+      "content": "Services in Angular are injectable classes that encapsulate business logic, data access, and shared functionality, keeping components focused solely on presentation. By offloading concerns like HTTP calls, authentication, or calculations to services, you achieve cleaner, more testable code that adheres to the single responsibility principle.\n\nAngular's dependency injection (DI) container is the magic behind services. Registered at the module or component level via providers, services become available for injection through constructors. For instance, a 'UserService' might fetch users from an API using HttpClient, returning an Observable that components subscribe to for real-time updates.\n\nCreating a service is straightforward: `ng generate service user` produces a class with an @Injectable decorator. You can scope services hierarchically—singleton at root for app-wide sharing, or providedIn: 'platform' for multi-app scenarios. This flexibility shines in micro-frontends or lazy-loaded modules.\n\nServices often integrate with RxJS for handling streams: operators like map, filter, and switchMap transform data elegantly. Error handling via catchError ensures resilience, while subjects allow components to trigger service methods, like reloading data after a form submission.\n\nIn practice, consider a logging service that intercepts HTTP requests for auditing, or a cart service in an e-commerce app managing state across routes. Mocking services in unit tests with Jasmine spies verifies interactions without real API hits.\n\nAdvanced patterns include factory providers for dynamic instantiation or using InjectionToken for non-class dependencies like configuration objects. Guards and resolvers, built on services, secure routes and pre-fetch data, enhancing user experience.\n\nBy mastering services, you'll unlock Angular's full potential for modular, scalable apps. This explanation demystifies their role—follow along with the code snippets to inject your first service and watch your components slim down. Services aren't just utilities; they're the backbone of enterprise-grade Angular architecture.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Angular", "Services", "Dependency Injection"],
       "date": "2025-01-17",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Angular+Services+Explained"
     },
     {
       "id": 4,
       "title": "RxJS Observables in Angular",
-      "content": "Observables provide support for passing messages between publishers and subscribers. Angular uses RxJS heavily for asynchronous operations.",
+      "content": "RxJS Observables form the reactive backbone of Angular, enabling efficient handling of asynchronous data flows, from user inputs to server responses. Unlike Promises, which resolve once, Observables can emit multiple values over time, supporting cancellation, error propagation, and composition via operators—making them ideal for real-time UIs like live search or stock tickers.\n\nIn Angular, Observables shine with HttpClient, which returns them by default for requests, allowing lazy execution via subscribe(). The pipe() method chains operators: tap() for side effects, retry() for resilience, and debounceTime() to throttle rapid events like keypresses.\n\nHot vs. cold Observables distinguish multicast (shared subscriptions) from unicast behaviors; Subjects like BehaviorSubject maintain state, perfect for form validation sharing. Angular's async pipe in templates auto-subscribes and unsubscribes, preventing memory leaks—a best practice over manual ngOnDestroy unsubscribes.\n\nBuilding custom Observables with fromEvent() or interval() unlocks advanced patterns, such as polling APIs or drag-and-drop interactions. Error handling with catchError and finalize() ensures graceful degradation, while shareReplay() caches emissions for multiple subscribers.\n\nPerformance tips include using takeUntil() with a subject for cleanup in components, and avoiding nested subscribes—prefer flatMap or switchMap for sequential async ops. In large apps, state management libraries like NgRx leverage Observables for predictable data flows.\n\nThis deep dive equips you to harness RxJS's power in Angular. Experiment with the examples: create a search component that filters results as you type, using combineLatest for multi-input coordination. Observables transform passive apps into responsive powerhouses—embrace them to elevate your development.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["RxJS", "Angular", "Observables"],
       "date": "2025-01-18",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=RxJS+Observables+in+Angular"
     },
     {
       "id": 5,
       "title": "Angular Routing Basics",
-      "content": "Angular routing allows navigation between different views of an application. It uses the RouterModule to configure paths and components.",
+      "content": "Angular Routing transforms static single-page applications (SPAs) into navigable experiences, allowing seamless transitions between views without full page reloads. At its core, the RouterModule configures paths mapped to components, leveraging the browser's History API for clean URLs and back-button support.\n\nSetup begins in AppModule: import RouterModule.forRoot(routes), where routes is an array of Route objects defining path, component, and optional children for nested layouts. Wildcard routes (**) catch 404s, while redirects handle canonical URLs.\n\nNavigation occurs via routerLink directive for declarative links or Router.navigate() for programmatic jumps, passing parameters like /user/:id for dynamic content. ActivatedRoute provides access to params, queryParams, and data resolvers for pre-loading.\n\nGuards enhance security: CanActivate checks auth before activation, CanDeactivate prompts unsaved changes, and CanLoad lazy-loads modules conditionally. Route reuse strategies cache components for faster returns, optimizing e-commerce checkouts.\n\nLazy loading with loadChildren splits bundles, improving initial load times—crucial for large apps. Angular's router events, like NavigationStart, enable loading spinners or analytics tracking.\n\nBest practices include typed routes with RouterLinkActive for styling active links and avoiding deep nesting for simplicity. In this basics guide, we'll build a multi-page blog app with auth guard. Routing isn't just navigation; it's the skeleton of intuitive SPAs. Code along, and navigate your Angular journey with confidence.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Routing", "Angular", "SPA"],
       "date": "2025-01-19",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Angular+Routing+Basics"
     },
     {
       "id": 6,
       "title": "TypeScript Interfaces in Depth",
-      "content": "Interfaces in TypeScript define the shape of an object. They are crucial for strong typing and large-scale application development.",
+      "content": "TypeScript interfaces define contracts for objects, enforcing shape and type safety in your code—essential for large-scale applications where inconsistencies can cascade into bugs. Unlike classes, interfaces are erased at compile-time, serving purely as compile-time checks without runtime overhead.\n\nBasic syntax: interface User { name: string; age: number; } allows type annotations like function greet(user: User), catching mismatches early. Optional properties (? suffix) and readonly modifiers protect immutability, while index signatures [key: string]: any handle dynamic keys.\n\nExtending interfaces promotes reuse: interface Admin extends User { role: string; }, inheriting and adding fields. Union types (User | Admin) and intersections (User & Serializable) compose complex types, powering discriminated unions for type narrowing via type guards.\n\nIn Angular, interfaces shine for component props, service responses, and NgRx actions, ensuring API contracts match frontend expectations. Generics like interface Repository<T> abstract over types, enabling type-safe CRUD ops.\n\nAdvanced features include mapped types (Pick<User, 'name' | 'age'>) for partials and conditional types for utilities like NonNullable<T>. Declaration merging auto-augments third-party libs.\n\nThis in-depth exploration reveals interfaces as TypeScript's typing powerhouse. Implement a typed e-commerce cart system using the examples—witness how they tame complexity and boost refactor confidence. Interfaces aren't optional; they're the blueprint for robust, scalable code.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["TypeScript", "Interfaces", "Programming"],
       "date": "2025-01-21",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=TypeScript+Interfaces+in+Depth"
     },
     {
       "id": 7,
       "title": "Introduction to Web Development",
-      "content": "Web development involves building websites and applications for the internet. It includes both frontend and backend technologies.",
+      "content": "Web development is the art and science of crafting interactive experiences on the internet, blending creativity with technical prowess to deliver functional websites and applications. At its essence, it splits into frontend (client-side) and backend (server-side), with full-stack developers bridging both.\n\nFrontend fundamentals start with HTML for structure, CSS for styling, and JavaScript for interactivity. Modern stacks incorporate frameworks like React or Vue for component-based UIs, ensuring responsive designs via media queries and Flexbox/Grid.\n\nBackend involves servers handling logic, databases, and APIs—Node.js with Express for JS enthusiasts, or Python's Django for rapid prototyping. RESTful APIs facilitate data exchange, secured with JWT or OAuth.\n\nVersion control with Git, deployment on Vercel or AWS, and CI/CD pipelines streamline collaboration. Progressive Web Apps (PWAs) add offline capabilities via Service Workers, blurring app-web lines.\n\nChallenges include cross-browser compatibility, accessibility (WCAG), and performance optimization (Lighthouse audits). Emerging trends: WebAssembly for speed, Jamstack for static dynamism, and AI integration for personalization.\n\nThis intro demystifies the field—start with a simple portfolio site using the outlined steps. Web dev isn't static; it's an evolving ecosystem rewarding curiosity and practice. Dive in, build, iterate, and shape the digital world.",
       "author": "Sharad",
       "categoryId": 2,
       "tags": ["HTML", "CSS", "JavaScript"],
       "date": "2025-01-22",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Introduction+to+Web+Development"
     },
     {
       "id": 8,
       "title": "Building Responsive Layouts",
-      "content": "Responsive design ensures web pages render well on all devices. CSS Flexbox and Grid are key tools for modern responsiveness.",
+      "content": "Responsive layouts adapt seamlessly to any device, from mobiles to desktops, ensuring accessibility and user satisfaction in a multi-screen world. Mobile-first design—starting small, scaling up—prioritizes performance by loading essential CSS first.\n\nCSS Flexbox revolutionizes one-dimensional layouts: flex-direction controls flow, justify-content aligns horizontally, align-items vertically. A navigation bar might use display: flex; with space-between for even distribution.\n\nCSS Grid excels in two-dimensional control: grid-template-columns defines tracks, grid-gap spaces them. Build a complex dashboard with areas like header, sidebar, main—spanning rows/columns effortlessly.\n\nMedia queries (@media (min-width: 768px)) toggle styles, while relative units (em, rem, %) scale fluidly. Frameworks like Bootstrap accelerate with pre-built grids, but custom CSS hones precision.\n\nTesting tools: Chrome DevTools device emulation, ResizeMyBrowser extension. Accessibility: ARIA roles, semantic HTML. Performance: Minify CSS, lazy-load images.\n\nAdvanced: Container queries (@container) respond to parent size, not viewport. This guide walks through a responsive e-portfolio—code it, test it, refine it. Responsive design isn't a checkbox; it's empathetic engineering for diverse users.",
       "author": "Sharad",
       "categoryId": 2,
       "tags": ["CSS", "Responsive Design", "Frontend"],
       "date": "2025-01-23",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Building+Responsive+Layouts"
     },
     {
       "id": 9,
       "title": "JavaScript Async/Await Tutorial",
-      "content": "Async/Await simplifies working with asynchronous code. It is syntactic sugar over Promises, helping write cleaner async code.",
+      "content": "Async/await in JavaScript demystifies asynchronous programming, offering a synchronous-like syntax atop Promises for cleaner, more readable code. Introduced in ES2017, it wraps async functions that pause at await, resuming post-resolution without callback hell.\n\nDeclare with async function fetchData() { const response = await fetch('/api'); const data = await response.json(); return data; }—errors bubble via try/catch, mirroring sync flows.\n\nParallel execution: Promise.all([await fetchA(), await fetchB()]) races them; sequential with for await...of for iterables like streams.\n\nUnder the hood, async returns Promises; await yields until settled. Best for APIs, file I/O in Node, or DOM waits. Pitfalls: Forgetting await chains errors silently—use strict mode.\n\nIn browsers, top-level await (ES2022 modules) simplifies scripts. With generators, it enables pausing/resuming complex workflows.\n\nThis tutorial builds a weather app fetching multi-city data—async/await shines in coordinating requests. Practice, debug with console, and elevate your JS from procedural to reactive. Async/await isn't sugar; it's the future of fluent async code.",
       "author": "Sharad",
       "categoryId": 3,
       "tags": ["JavaScript", "Async", "Promises"],
       "date": "2025-01-25",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=JavaScript+Async%2FAwait+Tutorial"
     },
     {
       "id": 10,
       "title": "Understanding REST APIs",
-      "content": "REST APIs allow communication between client and server systems. They use standard HTTP verbs like GET, POST, PUT, and DELETE.",
+      "content": "REST (Representational State Transfer) APIs standardize client-server communication using HTTP, enabling stateless, cacheable interactions for scalable web services. Roy Fielding's principles guide: resources as URLs, actions via verbs (GET read, POST create, PUT update, DELETE remove).\n\nStatelessness means each request self-contains context—no server-side sessions. HATEOAS (Hypermedia) links guide navigation, though often omitted in practice.\n\nDesign bests: Plural nouns for collections (/users), singular for items (/users/1). Status codes: 200 OK, 201 Created, 404 Not Found. JSON payloads with consistent schemas, versioned via /v1/.\n\nSecurity: HTTPS, API keys, OAuth2. Rate limiting prevents abuse. Tools: Postman for testing, Swagger for docs.\n\nIn full-stack, frontend fetches via fetch() or Axios; backend serves with Express or Spring. Microservices amplify REST's modularity.\n\nThis understanding builds a simple CRUD API—implement endpoints, consume them. REST isn't rigid; it's a flexible foundation for interconnected systems.",
       "author": "Sharad",
       "categoryId": 2,
       "tags": ["API", "REST", "Backend"],
       "date": "2025-01-26",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Understanding+REST+APIs"
     },
     {
       "id": 11,
       "title": "Node.js Basics for Beginners",
-      "content": "Node.js is a runtime environment that allows JavaScript to run outside the browser. It is commonly used for backend development.",
+      "content": "Node.js empowers JavaScript on servers, leveraging V8 engine for non-blocking I/O and event-driven architecture—perfect for scalable backends handling concurrent requests efficiently.\n\nInstall via nodejs.org, verify with node -v. REPL (node) for interactive testing. Modules: CommonJS (require/module.exports) or ES6 (import/export).\n\nCore: fs for files, http for servers—minimal app: const http = require('http'); http.createServer((req, res) => { res.end('Hello'); }).listen(3000);\n\nNPM manages packages: npm init, install express for routing. Async patterns: callbacks, Promises, async/await for DB ops.\n\nEventEmitter for custom events, streams for large data. Error handling: process.on('uncaughtException').\n\nDeployment: PM2 for clustering, Docker for containers. This beginner guide crafts a REST server—run it, extend it. Node.js bridges frontend-backend, democratizing full-stack JS.",
       "author": "Sharad",
       "categoryId": 2,
       "tags": ["Node.js", "JavaScript", "Backend"],
       "date": "2025-01-27",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Node.js+Basics+for+Beginners"
     },
     {
       "id": 12,
       "title": "Mastering CSS Grid",
-      "content": "CSS Grid is a two-dimensional layout system that offers powerful ways to build complex responsive designs.",
+      "content": "CSS Grid unlocks two-dimensional layouts, positioning items in rows and columns with precision unmatched by Flexbox. Declare display: grid; then grid-template-columns: repeat(3, 1fr); for equal tracks.\n\nAreas: grid-template-areas: \"header header\" \"sidebar main\" \"footer footer\"; assign with grid-area: header;. Spans: grid-column: 1 / -1 for full width.\n\nResponsive: auto-fit/minmax(auto, 1fr) adapts columns. Subgrids (CSS Grid Level 3) nest hierarchies.\n\nAlignment: justify-items, align-items for cells; justify-self per item. Gaps: grid-gap: 1rem.\n\nFallbacks for IE: Feature queries (@supports). Tools: CSS Grid Generator.\n\nMastery via a photo gallery layout—code, tweak, admire. Grid isn't a tool; it's layout liberation for pixel-perfect designs.",
       "author": "Sharad",
       "categoryId": 2,
       "tags": ["CSS Grid", "Layouts", "UI"],
       "date": "2025-01-28",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Mastering+CSS+Grid"
     },
     {
       "id": 13,
       "title": "Understanding Promises in JavaScript",
-      "content": "Promises represent the eventual completion or failure of an asynchronous operation. They are foundational to modern async programming.",
+      "content": "Promises in JavaScript model async outcomes as objects with pending, fulfilled, or rejected states, chaining .then() for success and .catch() for errors—eschewing callback pyramids.\n\nCreation: new Promise((resolve, reject) => { if (ok) resolve(data); else reject(err); }). Static methods: Promise.all() awaits multiples, race() the fastest, allSettled() all regardless.\n\nChaining: fetch().then(res => res.json()).then(data => console.log).catch(err => handle);\n\nMicrotasks queue ensures order. Polyfills for older browsers.\n\nCommon pitfalls: Forgetting returns in .then(), double rejects. Use async/await atop for simplicity.\n\nThis understanding simulates API calls—chain them, handle failures. Promises are async's promise: reliable futures in uncertain code.",
       "author": "Sharad",
       "categoryId": 3,
       "tags": ["Promises", "JavaScript", "Asynchronous"],
       "date": "2025-01-29",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Understanding+Promises+in+JavaScript"
     },
     {
       "id": 14,
       "title": "Angular Lifecycle Hooks",
-      "content": "Angular components have lifecycle hooks that enable developers to tap into key events in a component's lifecycle.",
+      "content": "Angular lifecycle hooks intercept component milestones, from ngOnInit for post-view init to ngOnDestroy for cleanup—optimizing resource management and side effects.\n\nSequence: ngOnChanges (input changes), ngOnInit, ngDoCheck (frequent), ngAfterContentInit (projected content), ngAfterContentChecked, ngAfterViewInit (view children), ngAfterViewChecked, ngOnDestroy.\n\nUsage: ngOnInit for API calls, ngOnDestroy for unsubscribes. Interface implements trigger TypeScript checks.\n\nDirectives/pipes have parallels. Async: Use setTimeout in ngAfterViewInit for DOM readiness.\n\nTesting: Mock hooks with spies. Patterns: Guards in ngOnInit.\n\nHook into a counter component—watch lifecycle unfold. Hooks aren't events; they're choreographed dances for robust components.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Angular", "Lifecycle", "Hooks"],
       "date": "2025-01-30",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Angular+Lifecycle+Hooks"
     },
     {
       "id": 15,
       "title": "Building Forms in Angular",
-      "content": "Angular supports template-driven and reactive forms. Reactive forms provide more control and scalability in complex applications.",
+      "content": "Angular forms empower validation and submission, with template-driven for simplicity and reactive for control. Template-driven uses ngModel, directives like required, mirroring HTML5.\n\nReactive: FormBuilder.group({ name: ['', Validators.required] }), subscribe to valueChanges for reactivity. Custom validators: functions returning errors or null.\n\nDynamic: FormArray for lists, addControl for runtime fields. Accessibility: labels, error messages.\n\nTesting: TestBed.configureTestingModule with forms. Patterns: Async validators for server checks.\n\nBuild a registration form—validate, submit, succeed. Forms aren't inputs; they're conversational gateways in your app.",
       "author": "Sharad",
       "categoryId": 1,
       "tags": ["Angular", "Forms", "Reactive Forms"],
       "date": "2025-01-31",
-      "thumbnail": ""
-    },
-    {
-      "id": 16,
-      "title": "Deploying Angular Apps",
-      "content": "Angular applications can be deployed to various platforms such as Firebase, Netlify, and AWS S3. Production builds are optimized automatically.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["Angular", "Deployment", "Build"],
-      "date": "2025-02-01",
-      "thumbnail": ""
-    },
-    {
-      "id": 17,
-      "title": "Working with APIs in Angular",
-      "content": "Angular's HttpClient module provides a simplified API for HTTP requests. It supports interceptors, typed responses, and error handling.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["Angular", "HttpClient", "API"],
-      "date": "2025-02-02",
-      "thumbnail": ""
-    },
-    {
-      "id": 18,
-      "title": "JavaScript ES6 Features Overview",
-      "content": "ES6 introduced major improvements to JavaScript including let/const, arrow functions, classes, template literals, and modules.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["JavaScript", "ES6", "Tutorial"],
-      "date": "2025-02-03",
-      "thumbnail": ""
-    },
-    {
-      "id": 19,
-      "title": "Introduction to MongoDB",
-      "content": "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It is widely used in modern web applications.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["MongoDB", "Database", "Backend"],
-      "date": "2025-02-04",
-      "thumbnail": ""
-    },
-    {
-      "id": 20,
-      "title": "Building REST APIs with Express.js",
-      "content": "Express.js is a fast and minimalist backend framework for Node.js. It is commonly used to build REST APIs.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Express.js", "API", "Node.js"],
-      "date": "2025-02-05",
-      "thumbnail": ""
-    },
-    {
-      "id": 21,
-      "title": "Advanced Angular Directives",
-      "content": "Directives are powerful Angular features that allow you to attach behavior to DOM elements. Learn about structural and attribute directives.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["Angular", "Directives", "Advanced"],
-      "date": "2025-02-06",
-      "thumbnail": ""
-    },
-    {
-      "id": 22,
-      "title": "State Management with NgRx",
-      "content": "NgRx provides reactive state management for Angular applications using RxJS. It follows the Redux pattern with actions, reducers, and effects.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["Angular", "NgRx", "State Management"],
-      "date": "2025-02-07",
-      "thumbnail": ""
-    },
-    {
-      "id": 23,
-      "title": "Angular Testing Best Practices",
-      "content": "Learn how to write effective unit tests for Angular components, services, and pipes using Jasmine and Karma testing frameworks.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["Angular", "Testing", "Jasmine"],
-      "date": "2025-02-08",
-      "thumbnail": ""
-    },
-    {
-      "id": 24,
-      "title": "TypeScript Generics Explained",
-      "content": "Generics in TypeScript enable creating reusable components that work with multiple types while maintaining type safety.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["TypeScript", "Generics", "Programming"],
-      "date": "2025-02-09",
-      "thumbnail": ""
-    },
-    {
-      "id": 25,
-      "title": "Modern CSS with Sass",
-      "content": "Sass is a CSS preprocessor that adds powerful features like variables, nesting, mixins, and inheritance to your stylesheets.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["CSS", "Sass", "Preprocessors"],
-      "date": "2025-02-10",
-      "thumbnail": ""
-    },
-    {
-      "id": 26,
-      "title": "React vs Angular: A Comparison",
-      "content": "Comparing two popular frontend frameworks - their architecture, learning curve, performance, and use cases for modern web development.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["React", "Angular", "Comparison"],
-      "date": "2025-02-11",
-      "thumbnail": ""
-    },
-    {
-      "id": 27,
-      "title": "Vue.js Fundamentals",
-      "content": "Vue.js is a progressive JavaScript framework for building user interfaces. Learn about its core concepts and reactive data binding.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Vue.js", "JavaScript", "Frontend"],
-      "date": "2025-02-12",
-      "thumbnail": ""
-    },
-    {
-      "id": 28,
-      "title": "JavaScript Design Patterns",
-      "content": "Explore common JavaScript design patterns like Module, Observer, Factory, and Singleton to write maintainable and scalable code.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["JavaScript", "Design Patterns", "Programming"],
-      "date": "2025-02-13",
-      "thumbnail": ""
-    },
-    {
-      "id": 29,
-      "title": "Database Design Principles",
-      "content": "Learn fundamental database design concepts including normalization, relationships, indexing, and data integrity constraints.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Database", "SQL", "Design"],
-      "date": "2025-02-14",
-      "thumbnail": ""
-    },
-    {
-      "id": 30,
-      "title": "Docker for Web Developers",
-      "content": "Docker containers simplify application deployment and environment consistency. Learn how to containerize web applications.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Docker", "Containers", "DevOps"],
-      "date": "2025-02-15",
-      "thumbnail": ""
-    },
-    {
-      "id": 31,
-      "title": "Git Version Control Mastery",
-      "content": "Master Git commands, branching strategies, and collaboration workflows for effective version control in software projects.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Git", "Version Control", "Tools"],
-      "date": "2025-02-16",
-      "thumbnail": ""
-    },
-    {
-      "id": 32,
-      "title": "Web Performance Optimization",
-      "content": "Techniques to improve website loading speed and performance including code splitting, lazy loading, and asset optimization.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Performance", "Optimization", "Web"],
-      "date": "2025-02-17",
-      "thumbnail": ""
-    },
-    {
-      "id": 33,
-      "title": "Progressive Web Apps (PWA)",
-      "content": "PWAs combine the best of web and mobile apps. Learn about service workers, app manifests, and offline functionality.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["PWA", "Web Apps", "Mobile"],
-      "date": "2025-02-18",
-      "thumbnail": ""
-    },
-    {
-      "id": 34,
-      "title": "GraphQL vs REST",
-      "content": "Compare GraphQL and REST APIs - their differences, advantages, and when to choose each approach for your projects.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["GraphQL", "REST", "API"],
-      "date": "2025-02-19",
-      "thumbnail": ""
-    },
-    {
-      "id": 35,
-      "title": "Python for Web Development",
-      "content": "Python with frameworks like Django and Flask is excellent for backend development. Learn the basics of web development with Python.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Python", "Django", "Backend"],
-      "date": "2025-02-20",
-      "thumbnail": ""
-    },
-    {
-      "id": 36,
-      "title": "Machine Learning Basics",
-      "content": "Introduction to machine learning concepts, algorithms, and practical applications using Python and popular ML libraries.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Machine Learning", "AI", "Python"],
-      "date": "2025-02-21",
-      "thumbnail": ""
-    },
-    {
-      "id": 37,
-      "title": "Cybersecurity Fundamentals",
-      "content": "Essential cybersecurity concepts including encryption, authentication, common vulnerabilities, and secure coding practices.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Security", "Cybersecurity", "Best Practices"],
-      "date": "2025-02-22",
-      "thumbnail": ""
-    },
-    {
-      "id": 38,
-      "title": "Agile Development Methodology",
-      "content": "Understanding Agile principles, Scrum framework, and how agile methodologies improve software development processes.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Agile", "Scrum", "Methodology"],
-      "date": "2025-02-23",
-      "thumbnail": ""
-    },
-    {
-      "id": 39,
-      "title": "UI/UX Design Principles",
-      "content": "Fundamental principles of user interface and user experience design for creating intuitive and engaging digital products.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["UI", "UX", "Design"],
-      "date": "2025-02-24",
-      "thumbnail": ""
-    },
-    {
-      "id": 40,
-      "title": "Cloud Computing with AWS",
-      "content": "Introduction to Amazon Web Services including EC2, S3, Lambda, and other core services for cloud application deployment.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["AWS", "Cloud", "DevOps"],
-      "date": "2025-02-25",
-      "thumbnail": ""
-    },
-    {
-      "id": 41,
-      "title": "Mobile App Development with React Native",
-      "content": "Build cross-platform mobile applications using React Native. Learn about components, navigation, and native module integration.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["React Native", "Mobile", "JavaScript"],
-      "date": "2025-02-26",
-      "thumbnail": ""
-    },
-    {
-      "id": 42,
-      "title": "Software Architecture Patterns",
-      "content": "Explore common software architecture patterns like MVC, Microservices, and Serverless for building scalable applications.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Architecture", "Patterns", "Software"],
-      "date": "2025-02-27",
-      "thumbnail": ""
-    },
-    {
-      "id": 43,
-      "title": "Data Structures and Algorithms",
-      "content": "Essential data structures and algorithms every developer should know for technical interviews and efficient programming.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Algorithms", "Data Structures", "Programming"],
-      "date": "2025-02-28",
-      "thumbnail": ""
-    },
-    {
-      "id": 44,
-      "title": "DevOps CI/CD Pipelines",
-      "content": "Implement continuous integration and continuous deployment pipelines using tools like Jenkins, GitLab CI, and GitHub Actions.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["DevOps", "CI/CD", "Automation"],
-      "date": "2025-03-01",
-      "thumbnail": ""
-    },
-    {
-      "id": 45,
-      "title": "Web Accessibility (a11y)",
-      "content": "Making websites accessible to people with disabilities using semantic HTML, ARIA attributes, and keyboard navigation.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Accessibility", "a11y", "Web Standards"],
-      "date": "2025-03-02",
-      "thumbnail": ""
-    },
-    {
-      "id": 46,
-      "title": "Blockchain Technology Basics",
-      "content": "Understanding blockchain fundamentals, cryptocurrencies, smart contracts, and decentralized applications (dApps).",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Blockchain", "Cryptocurrency", "Web3"],
-      "date": "2025-03-03",
-      "thumbnail": ""
-    },
-    {
-      "id": 47,
-      "title": "Full-Stack Development Roadmap",
-      "content": "Comprehensive guide to becoming a full-stack developer covering frontend, backend, databases, and deployment technologies.",
-      "author": "Sharad",
-      "categoryId": 3,
-      "tags": ["Full-Stack", "Roadmap", "Career"],
-      "date": "2025-03-04",
-      "thumbnail": ""
-    },
-    {
-      "id": 48,
-      "title": "Microservices Architecture",
-      "content": "Designing and building microservices-based applications with independent deployment, scalability, and technology diversity.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["Microservices", "Architecture", "Backend"],
-      "date": "2025-03-05",
-      "thumbnail": ""
-    },
-    {
-      "id": 49,
-      "title": "JavaScript Frameworks Comparison",
-      "content": "Detailed comparison of popular JavaScript frameworks including React, Angular, Vue, and Svelte for modern web development.",
-      "author": "Sharad",
-      "categoryId": 2,
-      "tags": ["JavaScript", "Frameworks", "Comparison"],
-      "date": "2025-03-06",
-      "thumbnail": ""
-    },
-    {
-      "id": 50,
-      "title": "Advanced TypeScript Techniques",
-      "content": "Master advanced TypeScript features like conditional types, mapped types, template literal types, and declaration merging.",
-      "author": "Sharad",
-      "categoryId": 1,
-      "tags": ["TypeScript", "Advanced", "Programming"],
-      "date": "2025-03-07",
-      "thumbnail": ""
+      "thumbnail": "https://placehold.co/600x400?text=Building+Forms+in+Angular"
     }
   ],
   "categories": [
