@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, ObservableLike } from 'rxjs';
-import { PostModel } from '../models/post-model';
-import { CategoryModel } from '../models/category-model';
+import { Post } from '../models/post-model';
+import { Category } from '../models/category-model';
+
 
 @Injectable({
   providedIn: 'root',
 })
+
+
 export class ApiService {
   private apiUrl = 'http://localhost:3001';
 
@@ -17,23 +20,23 @@ export class ApiService {
   // =========================
 
   // GET all
-  getPosts(): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(`${this.apiUrl}/posts`);
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.apiUrl}/posts`);
   }
 
   // GET one
-  getPost(id: number): Observable<PostModel> {
-    return this.http.get<PostModel>(`${this.apiUrl}/posts/${id}`);
+  getPost(id: number): Observable<Post> {
+    return this.http.get<Post>(`${this.apiUrl}/posts/${id}`);
   }
 
   // POST
-  createPost(post: Omit<PostModel, 'id'>): Observable<PostModel> {
-    return this.http.post<PostModel>(`${this.apiUrl}/posts`, post);
+  createPost(post: Omit<Post, 'id'>): Observable<Post> {
+    return this.http.post<Post>(`${this.apiUrl}/posts`, post);
   }
 
   // PUT
-  updatePost(id: number, post: PostModel): Observable<PostModel> {
-    return this.http.put<PostModel>(`${this.apiUrl}/posts/${id}`, post);
+  updatePost(id: number, post: Post): Observable<Post> {
+    return this.http.put<Post>(`${this.apiUrl}/posts/${id}`, post);
   }
 
   // DELETE
@@ -46,18 +49,18 @@ export class ApiService {
   // ==============================
 
   // GET all
-  getCategories(): Observable<CategoryModel[]> {
-    return this.http.get<CategoryModel[]>(`${this.apiUrl}/categories`);
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.apiUrl}/categories`);
   }
 
   // POST
-  createCategory(category: Omit<CategoryModel, 'id'>): Observable<CategoryModel> {
-    return this.http.post<CategoryModel>(`${this.apiUrl}/categories`, category);
+  createCategory(category: Omit<Category, 'id'>): Observable<Category> {
+    return this.http.post<Category>(`${this.apiUrl}/categories`, category);
   }
 
   // PUT
-  updateCategory(id: number, category: CategoryModel): Observable<CategoryModel> {
-    return this.http.put<CategoryModel>(`${this.apiUrl}/categories/{id}`, category);
+  updateCategory(id: number, category: Category): Observable<Category> {
+    return this.http.put<Category>(`${this.apiUrl}/categories/${id}`, category);
   }
 
   // DELETE
