@@ -53,7 +53,7 @@
         class="form-control"
       >
         <option value="">Select a category</option>
-        <option *ngFor="let cat of categories" value="cat.id">{{ cat.name }}</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
       </select>
     </div>
 
