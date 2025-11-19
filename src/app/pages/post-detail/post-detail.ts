@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryModel } from '../../models/category-model';
-import { PostModel } from '../../models/post-model';
+import { Category } from '../../models/category-model';
+import { Post } from '../../models/post-model';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ApiService } from '../../services/api-service';
 import { NgIf,NgFor } from '@angular/common';
@@ -15,8 +15,8 @@ import { NgIf,NgFor } from '@angular/common';
 
 
 export class PostDetail implements OnInit {
-  post?: PostModel;
-  categories: CategoryModel[] = [];
+  post?: Post;
+  categories: Category[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -45,7 +45,7 @@ export class PostDetail implements OnInit {
   }
 
   getCategoryName(categoryId: number): string {
-    const category = this.categories.find((cat) => cat.id === categoryId);
+    const category = this.categories.find((cat) => +cat.id === categoryId);
     return category ? category.name : 'Unknown';
   }
 
