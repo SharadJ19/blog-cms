@@ -16,11 +16,12 @@ import { NgFor } from '@angular/common';
 
 
 export class PostForm implements OnInit {
+
   post: Omit<Post, 'id'> = {
     title: '',
     content: '',
     author: '',
-    categoryId: 0,
+    categoryId: '',
     tags: [],
     date: new Date().toISOString().split('T')[0],
     thumbnail: '',
@@ -29,7 +30,7 @@ export class PostForm implements OnInit {
   categories: Category[] = [];
   tagsInput = '';
   isEdit = false;
-  postId?: number;
+  postId?: string;
 
   constructor(
     private apiService: ApiService,
@@ -37,24 +38,28 @@ export class PostForm implements OnInit {
     private router: Router
   ) {}
 
+  
   ngOnInit() {
     this.loadCategories();
 
     this.route.params.subscribe((params) => {
       if (params['id']) {
         this.isEdit = true;
-        this.postId = +params['id'];
+        this.postId = params['id'] as string;
         this.loadPost(this.postId);
       }
     });
   }
 
-  loadPost(id: number) {
+  
+  loadPost(id: string) {
     this.apiService.getPost(id).subscribe((post) => {
-      this.post = post;
+      const {id: _id,...rest } = post;
+      this.post = {...rest};
       this.tagsInput = post.tags.join(', ');
     });
   }
+
 
   loadCategories() {
     this.apiService.getCategories().subscribe((categories) => {
@@ -62,8 +67,9 @@ export class PostForm implements OnInit {
     });
   }
 
+
   onSubmit() {
-    const postData = {
+    const postData:Omit<Post,'id'> = {
       ...this.post,
       tags: this.tagsInput
         .split(',')
@@ -83,7 +89,9 @@ export class PostForm implements OnInit {
     }
   }
 
+
   goBack() {
     this.router.navigate(['/posts']);
   }
+
 }
