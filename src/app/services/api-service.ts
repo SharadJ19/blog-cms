@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   // GET one
-  getPost(id: number): Observable<Post> {
+  getPost(id: string): Observable<Post> {
     return this.http.get<Post>(`${this.apiUrl}/posts/${id}`);
   }
 
@@ -35,12 +35,12 @@ export class ApiService {
   }
 
   // PUT
-  updatePost(id: number, post: Post): Observable<Post> {
+  updatePost(id: string, post: Post): Observable<Post> {
     return this.http.put<Post>(`${this.apiUrl}/posts/${id}`, post);
   }
 
   // DELETE
-  deletePost(id: number): Observable<void> {
+  deletePost(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/posts/${id}`);
   }
 
@@ -59,12 +59,13 @@ export class ApiService {
   }
 
   // PUT
-  updateCategory(id: number, category: Category): Observable<Category> {
+  updateCategory(id: string, category: Category): Observable<Category> {
     return this.http.put<Category>(`${this.apiUrl}/categories/${id}`, category);
   }
 
   // DELETE
-  deleteCategory(id: number): Observable<void> {
+  deleteCategory(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/categories/${id}`);
   }
+  
 }
