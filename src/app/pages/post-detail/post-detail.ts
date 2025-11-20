@@ -26,17 +26,21 @@ export class PostDetail implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      const id = +params['id'];
-      this.loadPost(id);
+      const id = params['id'] as string;
+      if(id){
+        this.loadPost(id);
+      }
     });
     this.loadCategories();
   }
 
-  loadPost(id: number) {
+
+  loadPost(id: string) {
     this.apiService.getPost(id).subscribe((post) => {
       this.post = post;
     });
   }
+
 
   loadCategories() {
     this.apiService.getCategories().subscribe((categories) => {
@@ -44,10 +48,12 @@ export class PostDetail implements OnInit {
     });
   }
 
-  getCategoryName(categoryId: number): string {
-    const category = this.categories.find((cat) => +cat.id === categoryId);
+
+  getCategoryName(categoryId: string): string {
+    const category = this.categories.find((cat) => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   }
+
 
   deletePost() {
     if (this.post && confirm('Are you sure you want to delete this post?')) {
@@ -57,7 +63,9 @@ export class PostDetail implements OnInit {
     }
   }
 
+
   goBack() {
     this.router.navigate(['/posts']);
   }
+
 }
