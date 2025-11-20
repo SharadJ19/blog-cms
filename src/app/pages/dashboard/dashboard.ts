@@ -4,12 +4,15 @@ import { Post } from '../../models/post-model';
 import { RouterLink } from '@angular/router';
 import { NgIf, NgFor } from '@angular/common';
 
+
 @Component({
   selector: 'app-dashboard',
   imports: [NgIf, NgFor, RouterLink],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
+
+
 export class Dashboard implements OnInit {
   postsCount = 0;
   categoriesCount = 0;
@@ -18,9 +21,10 @@ export class Dashboard implements OnInit {
   // we could also use inject keyword for using ApiService (modern way)
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.loadData();
   }
+
 
   loadData() {
     // fetching the last 5 posts
