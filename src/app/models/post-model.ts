@@ -1,9 +1,9 @@
 export interface Post {
-  id: number;
+  id: string;
   title: string;
   content: string;
   author: string;
-  categoryId: number;
+  categoryId: string;
   tags: string[];
   date: string;
   thumbnail?: string;
