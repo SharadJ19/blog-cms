@@ -26,6 +26,7 @@ export class Posts implements OnInit {
     this.loadCategories();
   }
 
+
   loadPosts() {
     this.apiService.getPosts().subscribe((posts) => {
       this.posts = posts;
@@ -33,35 +34,37 @@ export class Posts implements OnInit {
     });
   }
 
+
   loadCategories() {
     this.apiService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
   }
 
+
   // Searches in title and content + both search and category must match !
   filterPosts() {
+    const term = this.searchTerm.toLowerCase();
     this.filteredPosts = this.posts.filter((post) => {
-      const matchesSearch =
-        post.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-        post.content.toLowerCase().includes(this.searchTerm.toLowerCase());
-      const matchesCategory =
-        !this.selectedCategory || post.categoryId.toString() === this.selectedCategory;
-
+      const matchesSearch = post.title.toLowerCase().includes(term) || post.content.toLowerCase().includes(term);
+      const matchesCategory = !this.selectedCategory || post.categoryId === this.selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }
 
-  getCategoryName(categoryId: number): string {
-    const category = this.categories.find((cat) => +cat.id === categoryId);
+
+  getCategoryName(categoryId: string): string {
+    const category = this.categories.find((cat) => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   }
 
-  deletePost(id: number) {
+
+  deletePost(id: string) {
     if (confirm('Are you sure you want to delete his post?')) {
       this.apiService.deletePost(id).subscribe(() => {
         this.loadPosts();
       });
     }
   }
+
 }
