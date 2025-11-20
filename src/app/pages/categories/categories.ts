@@ -44,7 +44,7 @@ export class Categories implements OnInit {
   }
 
 
-  getPostCount(categoryId: number): number {
+  getPostCount(categoryId: string): number {
     return this.posts.filter((post) => post.categoryId === categoryId).length;
   }
 
@@ -68,6 +68,7 @@ export class Categories implements OnInit {
   editCategory(category: Category) {
     this.editingCategory = { ...category };
   }
+  
 
   updateCategory() {
     if (this.editingCategory) {
@@ -86,7 +87,7 @@ export class Categories implements OnInit {
   }
 
 
-  deleteCategory(id: number) {
+  deleteCategory(id: string) {
     if (confirm('Are you sure you want to delete this category?')) {
       this.apiService.deleteCategory(id).subscribe(() => {
         this.loadCategories();
