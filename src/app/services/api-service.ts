@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, ObservableLike } from 'rxjs';
 import { Post } from '../models/post-model';
 import { Category } from '../models/category-model';
-
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ import { Category } from '../models/category-model';
 
 
 export class ApiService {
-  private apiUrl = 'http://localhost:3001';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
