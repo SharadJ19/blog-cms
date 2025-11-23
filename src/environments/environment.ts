@@ -1,5 +1,5 @@
-// development (default)
+// Production
 export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:3001'
+  production: true,
+  apiUrl: 'https://blog-cms-backend-one.vercel.app'
 };
