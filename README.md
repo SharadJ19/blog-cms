@@ -283,7 +283,7 @@ This project helped me master:
 
 ## 📝 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
 
 ## 👨‍💻 Author
 
