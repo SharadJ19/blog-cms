@@ -8,7 +8,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-### [🌐 View Live Demo](https://blog-cms-angular.vercel.app)
+### [🌐 View Live Demo](https://blog-cms-angular.vercel.app) | [📸 Screenshots](https://github.com/SharadJ19/blog-cms?tab=readme-ov-file#-screenshots)
 
 </div>
 
